@@ -3,19 +3,18 @@
 1. Desarrollar un algoritmo que calcule el promedio de un arreglo de reales.
 
 ```python
-# Pedir al usuario que ingrese los números separados por espacios
-l = input("Ingrese los números separados por espacios: ")
-# Convertir la l en una lista de números reales y se utiliza el split para dividir los numeros de manera individual
-numeros = [float(i) for i in l.split()]
-# Calcular la suma de los elementos en la lista numeros
-suma = sum(numeros)
-# Calcular la cantidad de elementos en la lista numeros
-n = len(numeros)
-# Calcular el promedio
-promedio = suma / n
+#def calcularPromedio(lista:list) -> float: # Función para calcular promedio
+    suma = 0              # Inicializar promedio en 0
+    for numero in lista:  # Realiza la suma de los números reales
+        suma += numero
+    return suma / len(lista) # Retorna el promedio
 
-# Imprimir el resultado
-print("El promedio de" + str(numeros) + " es: " + str(promedio))
+if __name__ == "__main__":
+    n = int(input("Ingrese la cantidad de números reales a ingresar: "))   # Ingreso de cantidad de números
+    lista = [float(input("Ingrese el número real No. ")) for x in range(n)]  # Ingreso de los números reales
+   
+    respuesta = calcularPromedio(lista)  # Llamar la función y asignarlo a respuesta
+    print("El promedio de " + str(lista) + " es: " + str(respuesta)) # Imprimir resultado
 ```
 
 2. Desarrollar un algoritmo que calcule el producto punto de dos arreglos de números enteros (reales) de igual tamaño.
