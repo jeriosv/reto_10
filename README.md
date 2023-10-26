@@ -1,5 +1,4 @@
 # Reto No. 10:  Arreglos, listas.
-# "Repito y repita se fueron a nadar repito se ahogó y ¿quién quedó?": acertijo infantil.
 
 1. Desarrollar un algoritmo que calcule el promedio de un arreglo de reales.
 
