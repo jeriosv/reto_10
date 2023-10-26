@@ -62,17 +62,20 @@ if __name__ == "__main__":
 
 ## 4. Revisar que son los algoritmos de sorting, entender bubble-sort (enlace a implementación).
 
-   El algoritmo de ordenamiento de burbuja (Bubble Sort en inglés) es un algoritmo simple que se utiliza para ordenar una lista o un arreglo de elementos. El nombre "burbuja" proviene del hecho de que los elementos más grandes "burbujean" hacia arriba a medida que se comparan y se intercambian a lo largo del arreglo, hasta que todos los elementos estén en su posición correcta.
-   Bubble Sort es el algoritmo más simple de clasificación, que funciona intercambiando repetidamente los elementos adyacentes si están en el orden incorrecto. Este algoritmo no es adecuado para grandes conjuntos de datos por su complejidad promedio y toma ucho tiempo en procesamiento.
-   En este algoritmo:
+El algoritmo de ordenamiento de burbuja (Bubble Sort en inglés) es un algoritmo simple que se utiliza para ordenar una lista o un arreglo de elementos. El nombre "burbuja" proviene del hecho de que los elementos más grandes "burbujean" hacia arriba a medida que se comparan y se intercambian a lo largo del arreglo, hasta que todos los elementos estén en su posición correcta.
+   
+Bubble Sort es el algoritmo más simple de clasificación, que funciona intercambiando repetidamente los elementos adyacentes si están en el orden incorrecto. Este algoritmo no es adecuado para grandes conjuntos de datos por su complejidad promedio y toma ucho tiempo en procesamiento.
+   
+En este algoritmo:
      - Se recorre desde la izquierda y compara los elementos adyacentes y el superior se coloca en el lado derecho. 
      - De esta manera, el elemento más grande se mueve primero hacia el extremo derecho. 
      - Luego se continúa con este proceso para encontrar el segundo más grande y colocarlo y así sucesivamente hasta que se ordenen los datos.
 
-   ![image](https://github.com/jeriosv/reto_10/assets/142249529/67bed4a8-e425-49c6-8a97-57366a9d8ccc)
+![image](https://github.com/jeriosv/reto_10/assets/142249529/93f84947-96dd-48e9-b7bd-f81ed743ea4b)
 
 
-A continuación una implemetación del código fuente para bubble sorting:
+
+A continuación una implementación del código fuente para bubble sorting:
 
 ```python
 # Optimized Python program for implementation of Bubble Sort
