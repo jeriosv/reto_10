@@ -1,6 +1,6 @@
 # Reto No. 10:  Arreglos, listas.
 
-##1. Desarrollar un algoritmo que calcule el promedio de un arreglo de reales.
+## 1. Desarrollar un algoritmo que calcule el promedio de un arreglo de reales.
 
 ```python
 def calcularPromedio(lista:list) -> float: # Función para calcular promedio
@@ -17,7 +17,7 @@ if __name__ == "__main__":
     print("El promedio de " + str(lista) + " es: " + str(respuesta)) # Imprimir resultado
 ```
 
-##2. Desarrollar un algoritmo que calcule el producto punto de dos arreglos de números enteros (reales) de igual tamaño.
+## 2. Desarrollar un algoritmo que calcule el producto punto de dos arreglos de números enteros (reales) de igual tamaño.
 
    "The dot product is one way of multiplying two or more vectors. The resultant of the dot product of vectors is a scalar quantity. Thus, the dot product is also known as a scalar product. Algebraically, it is the sum of the products of the corresponding entries of two sequences of numbers."
 Tomado de https://www.cuemath.com/algebra/dot-product/
@@ -37,7 +37,7 @@ if __name__ == "__main__":
     print("El producto punto de", vector1, "y", vector2, "es:", respuesta) # Imprimir rsultado
 ```
 
-##3. Hacer un algoritmo que deje al final de un arreglo de números todos los ceros que aparezcan en dicho arreglo.
+## 3. Hacer un algoritmo que deje al final de un arreglo de números todos los ceros que aparezcan en dicho arreglo.
 
 ```python
 def moverCeros(arreglo):    # Función que mueve los ceros al final del arreglo
@@ -60,13 +60,17 @@ if __name__ == "__main__":
     print("El arreglo con ceros al final: " + str(arreglo))  # Imprimir el arreglo con ceros al final
 ```
 
-4. Revisar que son los algoritmos de sorting, entender bubble-sort (enlace a implementación).
+## 4. Revisar que son los algoritmos de sorting, entender bubble-sort (enlace a implementación).
 
+   El algoritmo de ordenamiento de burbuja (Bubble Sort en inglés) es un algoritmo simple que se utiliza para ordenar una lista o un arreglo de elementos. El nombre "burbuja" proviene del hecho de que los elementos más grandes "burbujean" hacia arriba a medida que se comparan y se intercambian a lo largo del arreglo, hasta que todos los elementos estén en su posición correcta.
    Bubble Sort es el algoritmo más simple de clasificación, que funciona intercambiando repetidamente los elementos adyacentes si están en el orden incorrecto. Este algoritmo no es adecuado para grandes conjuntos de datos por su complejidad promedio y toma ucho tiempo en procesamiento.
    En este algoritmo:
      - Se recorre desde la izquierda y compara los elementos adyacentes y el superior se coloca en el lado derecho. 
      - De esta manera, el elemento más grande se mueve primero hacia el extremo derecho. 
      - Luego se continúa con este proceso para encontrar el segundo más grande y colocarlo y así sucesivamente hasta que se ordenen los datos.
+
+   ![image](https://github.com/jeriosv/reto_10/assets/142249529/67bed4a8-e425-49c6-8a97-57366a9d8ccc)
+
 
 A continuación una implemetación del código fuente para bubble sorting:
 
@@ -104,3 +108,5 @@ if __name__ == "__main__":
  
 # This code is modified by Suraj krushna Yadav
 ```
+
+Tomado de: https://www.geeksforgeeks.org/bubble-sort/
