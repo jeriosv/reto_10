@@ -3,7 +3,7 @@
 1. Desarrollar un algoritmo que calcule el promedio de un arreglo de reales.
 
 ```python
-#def calcularPromedio(lista:list) -> float: # Función para calcular promedio
+def calcularPromedio(lista:list) -> float: # Función para calcular promedio
     suma = 0              # Inicializar promedio en 0
     for numero in lista:  # Realiza la suma de los números reales
         suma += numero
