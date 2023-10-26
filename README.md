@@ -1,6 +1,6 @@
 # Reto No. 10:  Arreglos, listas.
 
-1. Desarrollar un algoritmo que calcule el promedio de un arreglo de reales.
+##1. Desarrollar un algoritmo que calcule el promedio de un arreglo de reales.
 
 ```python
 def calcularPromedio(lista:list) -> float: # Función para calcular promedio
@@ -11,73 +11,55 @@ def calcularPromedio(lista:list) -> float: # Función para calcular promedio
 
 if __name__ == "__main__":
     n = int(input("Ingrese la cantidad de números reales a ingresar: "))   # Ingreso de cantidad de números
-    lista = [float(input("Ingrese el número real No. ")) for x in range(n)]  # Ingreso de los números reales
+    lista = [float(input("Ingrese el número real No. " + str(x+1) + ": ")) for x in range(n)]  # Ingreso de los números reales
    
     respuesta = calcularPromedio(lista)  # Llamar la función y asignarlo a respuesta
     print("El promedio de " + str(lista) + " es: " + str(respuesta)) # Imprimir resultado
 ```
 
-2. Desarrollar un algoritmo que calcule el producto punto de dos arreglos de números enteros (reales) de igual tamaño.
+##2. Desarrollar un algoritmo que calcule el producto punto de dos arreglos de números enteros (reales) de igual tamaño.
+
+   "The dot product is one way of multiplying two or more vectors. The resultant of the dot product of vectors is a scalar quantity. Thus, the dot product is also known as a scalar product. Algebraically, it is the sum of the products of the corresponding entries of two sequences of numbers."
+Tomado de https://www.cuemath.com/algebra/dot-product/
 
 ```python
-# Definir una función para calcular el producto punto de dos arreglos de números enteros
-def producto_punto(arreglo1, arreglo2):
-    # Verificamos que los arreglos tengan el mismo tamaño
-    if len(arreglo1) != len(arreglo2):
-        return None
-    # Calculamos el producto punto
-    resultado = 0
-    for i in range(len(arreglo1)):
-        resultado += arreglo1[i] * arreglo2[i]
-    return resultado
+def calcularProductoPunto(vector1:list, vector2:list) -> float: # Función para calcular el producto punto
+    productoPunto = 0           # Inicializa la variable en 0
+    for i in range(len(vector1)): # Itera según la longitud del vector 1
+        productoPunto += vector1[i]*vector2[i] # Va acumulando los productos (multiplicaciones)
+    return productoPunto
 
 if __name__ == "__main__":
-    # Pedir al usuario que ingrese los números del primer arreglo y convertir la l en una lista de números enteros
-    l = input("Ingrese los números separados por espacios del primer arreglo: ")
-    arreglo1 = [int(i) for i in l.split()]
-    # Pedir al usuario que ingrese los números del segundo arreglo y convertir la n en una lista de números enteros
-    n = input("Ingrese los números separados por espacios: ")
-    arreglo2 = [int(i) for i in n.split()]
-    # Se llama a la funcion y toma como argumentos las listas previamente dadas por el usuario 
-    resultado = producto_punto(arreglo1, arreglo2)
-    # Se imprime el resultado
-    if resultado is None:
-        print("Los arreglos no tienen el mismo tamaño.")
-    else:
-        print("El producto punto de", arreglo1, "y", arreglo2, "es:", resultado)
-
+    n = int(input("Ingrese el tamaño que tendrán los 2 vectores: "))
+    vector1 = [float(input("Ingrese el número real No. " + str(x+1) + " del primer vector: ")) for x in range(n)]  # Ingreso de los números reales
+    vector2 = [float(input("Ingrese el número real No. " + str(x+1) + " del segundo vector: ")) for x in range(n)]  # Ingreso de los números reales
+    respuesta = calcularProductoPunto(vector1, vector2) # Llamar la función y asignarlo a respuesta
+    print("El producto punto de", vector1, "y", vector2, "es:", respuesta) # Imprimir rsultado
 ```
 
-3. Hacer un algoritmo que deje al final de un arreglo de números todos los ceros que aparezcan en dicho arreglo.
+##3. Hacer un algoritmo que deje al final de un arreglo de números todos los ceros que aparezcan en dicho arreglo.
 
 ```python
-# Definir una función para mover los ceros al final de un arreglo de números
-def mover_ceros(arreglo):
-    # Creamos una lista para almacenar los ceros
+def moverCeros(arreglo):    # Función que mueve los ceros al final del arreglo
     ceros = []
-    # Inicializar variable i en 0
-    i = 0
-    # Se recorre la lista y se va agregando las caros que se encuentren 
-    while i < len(arreglo): #  Mientras que i sea menor a la cantidad de numeros de la lista o arreglo  
-        if arreglo[i] == 0: # Se evalua cada elemento del arreglo
+    i = 0                   # Inicializa contador 
+    while i < len(arreglo): #  Itera según la longitud del arreglo 
+        if arreglo[i] == 0: # Si un elemento es cero, se agrega a la lista ceros y se elimina de la original
             ceros.append(arreglo.pop(i)) # si es igual a cero se agrega a la lista ceros y se elimina de la original 
-        else: # si no se le suma una unidad a i para ir llevando un control de iteraciones 
+        else:               # sino se aumenta el contador
             i += 1
-    # Se agrega los ceros al final del arreglo y se devuelve 
-    arreglo.extend(ceros)
+    arreglo.extend(ceros)   # Agregar los ceros al final del arreglo
     return arreglo
 
 if __name__ == "__main__":
-    # Pedir al usuario que ingrese los números del arreglo y convertir la n en una lista de números enteros
-    n = input("Ingrese los números separados por espacios: ")
-    arreglo = [int(i) for i in n.split()]
-    #  Imprimir el arreglo original
-    print("Arreglo original:" + str(arreglo))
-    # Se llama a la funcion y toma como argumento la lista previamente dada por el usuario 
-    arreglo = mover_ceros(arreglo)
-    #  Imprimir el arreglo con los ceros al final
-    print("Arreglo con ceros al final:" + str (arreglo))
-
+    n = int(input("Ingrese la cantidad de números a ingresar: "))   # Ingreso de cantidad de números
+    arreglo= [int(input("Ingrese el número entero No. " + str(x+1) + ": ")) for x in range(n)]  # Ingreso de los números enteros
+  
+    print("El arreglo original es :       " + str(arreglo))  # Imprimir el arreglo original
+    arreglo = moverCeros(arreglo) # Llamar la función y asignarlo a arreglo
+    print("El arreglo con ceros al final: " + str(arreglo))  # Imprimir el arreglo con ceros al final
 ```
 
 4. Revisar que son los algoritmos de sorting, entender bubble-sort (enlace a implementación).
+
+   
